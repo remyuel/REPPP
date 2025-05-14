@@ -11,10 +11,10 @@
   },
   "type": "module",
   "scripts": {
+    "build": "next build && next-on-pages build",
+    "deploy": "wrangler deploy",
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "deploy": "vercel deploy",
     "deps:upgrade": "[ -z $GITHUB_ACTIONS ] && pnpm up -L notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
     "deps:link": "[ -z $GITHUB_ACTIONS ] && run-s deps:link:* || echo 'Skipping deps:update on CI'",
     "deps:unlink": "[ -z $GITHUB_ACTIONS ] && pnpm add notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
@@ -56,15 +56,17 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
+    "wrangler": "^4.14.4",
     "@fisch0920/eslint-config": "^1.4.0",
     "@next/bundle-analyzer": "^15.0.2",
     "@types/node": "^22.8.6",
     "@types/react": "^18.0.21",
     "cross-env": "^7.0.2",
-    "eslint": "^8.57.1",
+    "eslint": "9.x",
     "npm-run-all2": "^7.0.1",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "next-on-pages": "^0.1.6"
   },
   "overrides": {
     "cacheable-request": {
