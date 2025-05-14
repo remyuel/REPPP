@@ -57,7 +57,6 @@
   },
   "devDependencies": {
     "wrangler": "^4.14.4",
-    "@cloudflare/next-on-pages": "^1.0.0",
     "@fisch0920/eslint-config": "^1.4.0",
     "@next/bundle-analyzer": "^15.0.2",
     "@types/node": "^22.8.6",
