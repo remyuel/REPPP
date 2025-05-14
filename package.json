@@ -65,7 +65,7 @@
     "eslint": "^8.57.1",
     "npm-run-all2": "^7.0.1",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
     "next-on-pages": "^1.0.0"
   },
   "overrides": {
