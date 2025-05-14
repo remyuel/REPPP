@@ -11,10 +11,10 @@
   },
   "type": "module",
   "scripts": {
+    "build": "next build && next-on-pages build",
+    "deploy": "wrangler deploy",
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "deploy": "vercel deploy",
     "deps:upgrade": "[ -z $GITHUB_ACTIONS ] && pnpm up -L notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
     "deps:link": "[ -z $GITHUB_ACTIONS ] && run-s deps:link:* || echo 'Skipping deps:update on CI'",
     "deps:unlink": "[ -z $GITHUB_ACTIONS ] && pnpm add notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
@@ -56,6 +56,8 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
+    "wrangler": "^4.14.4",
+    "@cloudflare/next-on-pages": "^1.0.0",
     "@fisch0920/eslint-config": "^1.4.0",
     "@next/bundle-analyzer": "^15.0.2",
     "@types/node": "^22.8.6",
